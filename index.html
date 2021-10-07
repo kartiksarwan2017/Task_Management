@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
+    <title>Modern Todo List Application</title>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Home1</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Home2</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="header">
+                <h1 class="header-title">My Categories</h1>
+                <form class="sidebar-form" data-new-category-form>
+                    <div class="form-control">
+                        <input type="text" placeholder="Enter Category" data-new-category-input>
+                    </div>
+                    <button class="btn btn-outline-primary">
+                        <i class="fa fa-plus" aria-hidden="true" ></i> Add Category
+                    </button>
+                </form>
+            </header>
+            <ul class="sidebar-list" data-categories>
+                <li class="sidebar-item">All Categories</li>
+                <li class="sidebar-item">
+                    Work
+                    <input type="color" class="sidebar-color">
+                </li>
+                <li class="sidebar-item">
+                    School
+                    <input type="color" class="sidebar-color">
+                </li>
+            </ul>
+        </aside>
+       
+        
+        <!-- Main -->
+        <main class="main">
+            <!-- Header -->
+            <header class="header">
+                <div>
+                    <h1 class="header-title">Welcome Back, <strong>Developer Studio</strong></h1>
+                    <div class="currently-viewing" data-currently-viewing>You are currently viewing All Categories</div>
+                </div>
+                
+                <!-- Create Todo Form -->
+                <form class="create-todo-form" data-new-todo-form>
+                    <div class="form-control">
+                        <select data-new-todo-select required>
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" data-new-todo-input placeholder="Enter Todo" required>
+                    </div>
+                    <button class="btn btn-outline-primary">
+                        <i class="fa fa-plus" aria-hidden="true"  class="btn btn-outline-primary" ></i> Add Todo
+                    </button>
+                </form>
+            
+                <!-- Update Todo Form -->
+                <form class="edit-todo-form" data-edit-todo-form>
+                    <div class="form-control">
+                        <select data-edit-todo-select>
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <input class="txt" type="text" data-edit-todo-input placeholder="Enter Todo" required>
+                    </div>
+                    <button class="btn btn-primary">Save</button>
+                </form>
+            </header>
+
+            <!-- Cards -->
+            <section class="todos-container" data-cards>
+                <div class="todo" style="border-color: black;">
+                    <div class="todo-tag" style="background-color: rgba(0, 0, 0, 0.5); color: black;">
+                        Work
+                    </div>
+                    <p class="todo-description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, doloribus.
+                    </p>
+                    <div class="todo-actions">
+                        <i class="far fa-edit"></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="index.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
